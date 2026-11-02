@@ -282,18 +282,22 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ),
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        selectedItemColor: const Color(0xFFD32F2F),
-        unselectedItemColor: Colors.grey,
-        type: BottomNavigationBarType.fixed,
-        items: const [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
-          BottomNavigationBarItem(icon: Icon(Icons.search), label: "Buscar"),
-          BottomNavigationBarItem(
+      bottomNavigationBar: NavigationBar(
+        selectedIndex: 0,
+        destinations: [
+          NavigationDestination(
+            icon: Icon(Icons.home), label: "Home"
+          ),
+          NavigationDestination(
+            icon: Icon(Icons.search), 
+            label: "Buscar"
+          ),
+          NavigationDestination(
             icon: Icon(Icons.receipt_long_outlined),
             label: "Pedidos",
+            
           ),
-          BottomNavigationBarItem(icon: Icon(Icons.person), label: "Perfil"),
+          NavigationDestination(icon: Icon(Icons.person), label: "Perfil"),
         ],
       ),
     );

@@ -1,5 +1,6 @@
 import 'package:app_delivery/home_screen.dart';
 import 'package:app_delivery/login_screen.dart';
+import 'package:app_delivery/produtos_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -8,9 +9,10 @@ void main() {
       debugShowCheckedModeBanner: false,
       routes: {
         "home":(context)=> HomeScreen(),
-        "login":(context)=> LoginScreen()
+        "login":(context)=> LoginScreen(),
+        "buscar":(context)=> ProdutosScreen()
       },
-      initialRoute: 'home',
+      initialRoute: 'buscar',
     )
   );
 }
